@@ -1,0 +1,41 @@
+topimgs{
+    padding: 0;
+    border: 1px solid black;
+}
+
+.ami3{
+    margin: 50px 0 50px 0;}
+
+.ami3-1{
+    padding: 15px;
+}
+
+.ami4{
+    padding: 50px 50px 25px 50px;
+    margin:20px 0 70px 0;
+    background-color:#e8e8e8;
+}
+
+.ami5{
+    padding: 25px;
+}
+
+.ami6{
+    position: relative;
+    padding: 0 0 50px 0;
+}
+
+.ami7{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+
+.ami8 {
+    margin: 50px;
+}
+
+.ami9{
+    margin: 0 0 0 10px;
+    }
