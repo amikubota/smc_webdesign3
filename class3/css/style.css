@@ -1,0 +1,18 @@
+/* Everything RE: fonts and type */
+@import url("typography.css");
+
+/* To make it in comment: type it and select it and command + / */
+@import url("layout.css");
+
+.text-center
+{
+    text-align: center;
+}
+
+@media (min-witdh: 768px) {
+
+.image-title-cutecat {
+    height: 200px;
+    display: table-cell;
+}
+}
