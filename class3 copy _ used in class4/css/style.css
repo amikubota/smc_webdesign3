@@ -1,0 +1,27 @@
+/* Everything RE: fonts and type */
+@import url("typography.css");
+
+/* To make it in comment: type it and select it and command + / */
+@import url("layout.css");
+
+.text-center{
+    text-align: center;
+}
+
+@media (min-witdh: 768px) {
+.image-title-cutecat {
+    height: 200px;
+    display: table-cell;
+}
+}
+
+/*inClass4*/
+#toomuchtext {
+    max-height: 100px;
+    overflow-y:auto;/* use scroll instead auto to show scrall always */
+}
+
+/* How to over write specific action */
+.btn-primary:focus{
+    box-shadow:none;/* go to inspect - :hov - click it - copy it  - to over writing it */
+}
