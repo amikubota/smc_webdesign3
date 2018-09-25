@@ -1,0 +1,70 @@
+
+main {
+    text-align: center;
+}
+
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke: 1px black;
+    color: #f5eb27;
+}
+
+.heading {
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke: 1px black;
+    color: #58ade0;
+    font-size: 2.5em;
+}
+
+.heading-mini {
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke: 1px black;
+    color: #58ade0;
+    font-size: 1.2em;
+}
+
+.paragraph {
+    font-size: 1.2em;
+}
+
+.btm-custom {
+    width: 200px; 
+    color:#fff;
+    font-weight: 800;
+    background-color: #000000; 
+    border-color: #000000; 
+    border-radius: 0rem;
+} 
+
+.col-main {
+    padding: 75px;
+}
+
+.line {
+    border-top: 1px solid #58ade0;
+    margin: 5rem 0;
+}
+
+.paragraph-em {
+    font-size: 2em;
+}
+
+.boy-comment {
+    margin: 5rem 0 3rem 0;
+}
+
+@media (max-width: 576px){
+    h2 {
+        font-size:1.5em;
+    }
+
+    .paragraph {
+        font-size: 1em;
+    }
+
+    .col-main {
+        padding: 25px;
+    }
+
+    }
