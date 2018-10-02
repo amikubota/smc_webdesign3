@@ -22,7 +22,7 @@ text-align: center;
 }
 
 
-a, .modal-content {
+a, .submit-btn, .modal-title, .modal-content {
     color:black;
     font-family: 'lato', sans-serif;
     font-weight: 600;
@@ -63,9 +63,22 @@ a, .modal-content {
 .modal-content {
     width: 1500px;
     max-width: 100%;
+    background-color:#F2C227;
  }
 
  .modal-button {
     display: inline-block;
     text-align: right;
  }
+
+ .modal-header {
+    border-bottom: none;
+ }
+
+ .submit-btn {
+     background-color: #FCF3D4;
+ }
+
+ .submit-btn:hover {
+    background-color: #F7DA7D;
+}
