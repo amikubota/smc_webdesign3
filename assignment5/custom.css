@@ -1,0 +1,58 @@
+/* font */ 
+body {
+    font-family: 'lato', sans-serif;
+    color:#3e3e3e;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 2.2;
+}
+
+h2{
+    line-height: 1.4;
+}
+
+
+.p-footer{
+font-size: 0.8rem;
+text-align: center;
+}
+
+a {
+    color:black;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color:#FBB509;
+}
+
+
+/* layout */ 
+.jumbotron-fluid {
+    background-size: cover;
+    background-color: #2db88e;
+    background: url("imgs/teamlab-j.jpg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.jumbotron-fluid .col{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.myBotton{
+    text-align: center;
+  }
+
+.navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 1.5rem;
+}
