@@ -1,0 +1,11 @@
+.carousel-control-next-icon {
+    background-image: url("imgs/nexticon.png");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("imgs/previcon.png");
+}
+
+.productName {
+    font-size: 2.25rem;
+}
