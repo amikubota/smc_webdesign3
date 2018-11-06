@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <title>Ami Assignment9</title>
+  </head>
+<body>
+    <div class="jumbotron jumbotron-fluid jumb">
+        <div class="container text-center">
+            <img src="imgs/logo.png" class=logo>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row m-5">
+          <div class="col text-center">
+              <img src="imgs/progress-1.png" class="img-fluid img-progress">
+          </div>
+      </div>
+
+      <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-10 formStyle p-5">
+        <div class="row mb-3">
+          <div class="col"><h1>Shipping Information</h1>
+          <p class="comment">Please fill up all form before submit</p></div>
+        </div>  
+        <form id="form">
+          <div class="row">
+            <div class="form-group col-6">
+              <label for="firstName">First Name</label>
+              <input class="form-control" id="firstName" type="text" placeholder="Firstname">
+            </div>
+            <div class="form-group col-6">
+                <label for="lastName">Last Name</label>
+                <input class="form-control" id="lastName" type="text" placeholder="Lastname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="Email">Email address</label>
+              <input class="form-control" id="Email" type="email" placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-12">
+                <label for="streetAddress">Street Address</label>
+                <input class="form-control" id="streetAddress" type="text" placeholder="Street Address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-4">
+              <label for="city">City</label>
+              <input class="form-control" id="city" type="text" placeholder="city">
+            </div>
+            <div class="form-group col-4">
+              <label for="state">State</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>-- state --</option>
+                <option>California</option>
+                <option>Texas</option>
+                <option>Florida</option>
+                <option>New York</option>
+                <option>Oregon</option>
+              </select>
+            </div>
+            <div class="form-group col-4">
+              <label for="zip">Zip</label>
+              <input class="form-control" id="zip" type="text" placeholder="zip">
+            </div>  
+          </div>
+          <div class="row justify-content-end mt-2 pr-3">
+           <button type="submit" class="btn btn-primary col-3" id="submit" value="Submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  <script>
+   $(document).ready(function() { 
+    $('input.form-control').on('blur', function() {
+      var error; // エラー用の変数を定義
+      if( $(this).val() === '' ) { // この要素のvalueが空文字だったらエラー
+          error = true;
+      }
+      if( error ) {
+          // エラーが見つかった場合
+      if( !$(this).next('span.error').length ) { // この要素の後続要素が存在しない場合
+                  $(this).after('<span class="error">Please fill out this field.</span>'); // この要素の後にエラーメッセージを挿入
+      }
+      } else {
+          // エラーがなかった場合
+          $(this).next('span.error').remove(); // この要素の後続要素を削除
+      }
+    });
+    
+
+    // the script below to check if all forms filled. 
+    $('#submit').prop('disabled',true);
+    $('.form-control').on('change keyup',function(){
+      var flg=true;
+      if(
+        $('input.form-control[type=text].form-control').filter(function(){
+          return $(this).val()=="";
+        }).length +
+        $('select.form-control').filter(function(){
+          return $(this).prop('selectedIndex')==0;
+        }).length > 0) flg=false;
+      $('#submit').prop('disabled',!flg);
+    });
+
+     
+    /*  //the script below works for one form, it does not check if all forms changed.
+      if ($('input.form-control').val().length == 0) {
+      $('#submit').prop('disabled', true);
+      }
+      $('input.form-control').on('keydown keyup keypress change', function() {
+      if ( $(this).val().length > 0 ) {
+        $('#submit').prop('disabled', false);
+      } else {
+        $('#submit').prop('disabled', true);
+      }
+    }); */
+
+  });
+  </script> 
+</body>
+</html>

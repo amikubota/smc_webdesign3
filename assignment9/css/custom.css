@@ -1,0 +1,34 @@
+body {
+    background-color: #E9F0F4;
+}
+
+.error {
+    color:#ff4c4c;
+    font-size: 0.8em;
+}
+
+.formStyle {
+    background-color: white;
+}
+
+p.comment {
+    color:#0CC291;
+}
+
+.form-control::-webkit-input-placeholder { color:#cad0d1; } 
+
+.img-progress {
+    max-width:400px;
+}
+
+.logo{
+    max-width:150px;
+}
+
+.jumb{
+    background-color: white;
+}
+
+.logo-bg {
+    background-color: white;
+}
