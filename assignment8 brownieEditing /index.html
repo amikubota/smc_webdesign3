@@ -58,7 +58,7 @@
                     <div class="col-12">
                       <h2 class="productName">REN Chair</h2>
                       <h5 class="pb-1">KARIMOKU DESIGN TEAM</h5>
-                      <h5 class="pb-1">$420.00</h5>
+                      <h5 class="pb-1">$<span id="productPrice">420</span>.00</h5>
                       <p> The chair that makes you sit Up straight.<br>
                           REN was designed with the concept of sitting in a beautiful straight posture. With a backrest set slightly lower than a normal chair, users naturally straighten up their back and adopt a very elegant seating posture. </p>
                     </div>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="exampleRadios" 
-                                       id=" Maple Clear" value="mapleClear" checked>
+                                       id="Maple_Clear" value="mapleClear" checked>
                                 <label class="form-check-label" for="exampleRadios1">
                                     Maple Clear
                                 </label>
@@ -85,14 +85,14 @@
                             </select>
                             <label for="qty">QTY:</label>
                             <select id="qty" class="form-control mb-3" name="qty">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
                             </select>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">Add to card</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">Add <span id="productNumber"></span>to cart for $<span id="productTotal"></span></button>
                     </form>
                     </div>
                 </div>
@@ -110,56 +110,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script>
-            $(document).ready(function(){
-                  $('#carouselIndicators.carousel.slide').carousel({
-                      interval: 11000
-                  });
+      $(document).ready(function(){
+        $('#carouselIndicators.carousel.slide').carousel({
+          interval: 11000
+        });
+        
+        //updateButton();
 
+        var mapleBlackPrice = 520.00;
+        var mapleClearPrice = 420.00;
+        var mapleBlackCushion = ["Brown Leather", "Black Leather"];
+        var mapleClearCushion = ["Fabric: Black", "Fabric: White", "Fabric: Moss Gray", "Fabric: Brown"];
 
-                  var mapleBlackCushion = ["Brown Leather", "Black Leather"];
-                  var mapleClearCushion = ["Fabric: Black", "Fabric: White", "Fabric: Moss Gray", "Fabric: Brown"];
+        var updateButton = function(){
+          var totalPrice;
+          console.log(mapleBlackPrice);
+          console.log($('qty').val());
+          if ($("input[type=radio]:checked").val() == "mapleBlack") {
+            totalPrice = mapleBlackPrice * $('#qty').val();
+          }
+          if($("input[type=radio]:checked").val() == "mapleClear" ) {
+            totalPrice = mapleClearPrice * $('#qty').val();
+          }
+          
+          $("#productNumber").text($('#qty').val() + " ");
+          $("#productTotal").text(totalPrice);
+        }
 
-                var updateCushion = function (){
-                    console.log($('#mapleBlack').val());
+        var updateCushion = function (){
 
-                    $('#cushion').removeAttr('disabled');
-                    $('#cushion').html(''); //if you just keep it empty HTML('') it emptys out 
+          $('#cushion').removeAttr('disabled');
+          $('#cushion').html(''); //if you just keep it empty HTML('') it emptys out 
 
-                    if (mapleBlack.checked) {
-                        
-                        for(var i = 0; i < 3; i++){
-                            console.log(mapleBlackCushion[i]);
-                            var htmlContent = '<option value="' + mapleBlackCushion[i] + '">' + mapleBlackCushion[i] + "</option>";
-                
-                            $('#cushion').append(htmlContent);
-                        }
-                    }
-                }   
-                    $('#mapleBlack').change(function(){
-                   updateCushion();
-                 });
+          if ($("input[type=radio]:checked").val() == "mapleBlack") {
+            $("#productPrice").text(mapleBlackPrice);
+            for(var i = 0; i < mapleBlackCushion.length; i++){
+                console.log(mapleBlackCushion[i]);
+                var htmlContent = '<option value="' + mapleBlackCushion[i] + '">' + mapleBlackCushion[i] + "</option>";
+    
+                $('#cushion').append(htmlContent);
+            }
+          }
+          else if($("input[type=radio]:checked").val() == "mapleClear" ) {
+            $("#productPrice").text(mapleClearPrice);
+            for(var i = 0; i < mapleClearCushion.length; i++){
+                console.log(mapleClearCushion[i]);
+                var htmlContent = '<option value="' + mapleClearCushion[i] + '">' + mapleClearCushion[i] + "</option>";
+    
+                $('#cushion').append(htmlContent);
+            }
+          }
+        }   
+        $("input[type=radio]").click(function(){
+          console.log("update!");
+          updateCushion();
+          updateButton();
+        });
 
-                var updateCushion = function (){
-                    $('#cushion').removeAttr('disabled');
-                    $('#cushion').html(''); //if you just keep it empty HTML('') it emptys out 
+        $('#qty').change(function(){
+          updateButton();
+        })
 
-                    if($('#mapleClear').val() === 'mapleClear') {
-                        for(var i = 0; i < mapleClearCushion.length; i++){
-                            console.log(mapleClearCushion[i]);
-                            var htmlContent = '<option value="' + mapleClearCushion[i] + '">' + mapleClearCushion[i] + "</option>";
-                
-                            $('#cushion').append(htmlContent);
-                        }
-                    }
-                }    
-                
-                $('#mapleClear').change(function(){
-                   updateCushion();
-                });
-              
-
-
-            });
+      });
       </script>
   </body>
 </html>
