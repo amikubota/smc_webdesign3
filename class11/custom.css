@@ -1,0 +1,83 @@
+.animatable {
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:#ff5402;
+    animation: moveIt 10s -5s ease-in-out infinite; /* this name became the key  */
+    /* delay: animation starts at the delay point */
+    /* add infinite to make it repeat forever */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation_speed */
+}
+
+body {
+    background-color: black;
+}
+
+
+@keyframes moveIt{
+    0% {
+        width: 0px;
+        height: 0px; 
+        top: 0;
+        left: 0;
+    }
+    25%{
+        width: 300px;
+        height: 300px; 
+        top: 50%;
+        left: 50%;
+    }
+    50% {
+        width: 0px;
+        height: 0px; 
+        top: 100%;
+        left: 100%;
+    }
+    75%{
+        width: 300px;
+        height: 300px; 
+        top: 50%;
+        left: 50%;
+    }
+    100% {
+        width: 0px;
+        height: 0px; 
+        top: 0;
+        left: 0;
+    }
+}   
+
+
+/* @keyframes moveIt{
+    0% {
+        width: 300px;
+        height: 300px; 
+        top: 0;
+        left:0;}
+    50% {
+        width: 0px;
+        height: 0px; 
+        top: 100%;
+        left:100%;}
+}   */
+
+ /* @keyframes moveIt{
+    from {
+        width: 300px;
+        height: 300px; 
+        top: 0;
+        left:0;}
+    To {
+        width: 0px;
+        height: 0px; 
+        top: 100%;
+        left:100%;}
+}  */
+
+/* @keyframes moveIt{
+    from {left:0;}
+    to {left:100%;}
+} */

@@ -1,0 +1,25 @@
+body {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ background: #1c1026;
+ font-family: 'Allerta Stencil', sans-serif;
+}
+
+
+
+a h1 {
+    color:#ffffff;
+    margin-left: 50px;
+    margin-top: -25px;
+    margin-bottom: 50px;
+    letter-spacing: 1rem;
+
+}
+
+a h1:hover {
+    color:#fcb711;
+}
