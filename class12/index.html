@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Ami Assignment10</title>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+         <!-- resource: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes -->
+
+
+     <canvas id="box" width="600" height="480">
+         <!-- canvas is the only DOM so it will be only one Z-index -->
+         <!-- it's standard to write width and height in HTML when using Canvas -->
+         Get a new browser to see this! 
+     </canvas>
+
+     <script>
+     var canvas = document.getElementById("box");
+     
+     var context = canvas.getContext("2d");
+     /* those 2 above are nessecary to active canvas*/
+     
+     context.fillStyle = "rgb(255,0,125)";
+     context.fillRect(30, 30, 200, 300);
+     /* fillRext (x, y, width, height) */
+
+     context.fillStyle = "rgb(35,0,125)";
+      /* if I dont rewrite=reflesh the style the initial style stays */
+     context.fillRect(120, 120, 300, 150);
+     
+     </script>
+
+</body>
+</html>
