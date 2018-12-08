@@ -1,0 +1,378 @@
+/* Typo */
+
+body {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: white;
+}
+
+h1,h4,h5,.para{
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+h1{
+    font-weight: 900;
+}
+
+h4{
+    font-weight: 500;
+}
+
+h5{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+p{
+    line-height: 1.2;
+}
+
+.para{
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+.para-product{
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+.p-sm {
+    font-weight: 300;
+    font-size:0.8em;
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+.errorText{
+    font-weight: 300;
+    font-size:0.8em;
+    color:rgb(255,76,76,1);
+    
+}
+
+a.shop-guidelink{
+    color:white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e5e5e5;
+    font-size:1.1em;
+}
+
+.list-group-item a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.list-group-item a:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9em;
+}
+
+/* Layout */
+
+  /* LOGO */
+  .logo .mobile {
+    display: block;
+  }
+  .logo .desktop {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    .logo .mobile {
+        display: none;
+      }
+    .logo .desktop {
+        display: block;
+      }
+  }
+
+.container-fluid {
+    max-height: 1500px;
+}
+
+@media (min-width: 600px) {
+    .container-fluid {
+        max-height: 1970px;
+    }  
+}  
+
+.row {
+    margin: 0;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: black !important;
+    transition: background-color 200ms linear;
+  }
+
+.jumbotron-index-top {
+    margin-top: -60px;
+    background-size: cover;
+    background: url("imgs/jumbotron.png");
+    height: 800px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media (min-width: 600px) {
+    .jumbotron-index-top {
+        height: 1000px;
+    }  
+}    
+
+.box-gender-left {
+    height: 500px; 
+}
+
+.vertical-center {
+  margin-top: 40%;  
+}
+
+.box-gender-right {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .box-gender-left {
+        height: 600px; 
+    }
+
+    .box-gender-right {
+        display: block;
+        background-size: cover;
+        background: url("imgs/WomenMen.png");
+        height: 600px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+    }
+}
+
+.box-blog-left {
+    background-size: cover;
+    background: url("imgs/blog-s.png");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.box-blog-right {
+    height: 400px; 
+}
+
+.blog-para-index {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .box-blog-left {
+        height: 600px;
+    }
+
+    .blog-para-index {
+        display: block;
+    }
+    
+}
+
+.jumbotron-index-contact {
+    position: relative;
+    margin-top: -58px;
+    background-size: cover;
+    background: url("imgs/contact.jpg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+} 
+
+.btn-contact {
+    margin-top: 50%;
+}
+
+@media (min-width: 600px) {
+    .jumbotron-index-contact {
+        height: 800px;                 
+    }
+
+    .btn-contact {
+        margin-top: 23%;
+    }
+
+}  
+
+.logo-footer {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.productImg-shop {
+    max-width: 500px;
+    max-height: 700px;
+}
+
+.rowShop {
+    margin: 25px;
+}
+
+@media (min-width: 600px) {
+    .rowShop {
+        margin: 50px;
+    }
+
+}  
+
+.contactForm {
+    margin-top: 0px;
+}
+
+@media (min-width: 991px) {
+    .contactForm {
+        margin-top: 50px;
+    }
+} 
+
+.contact {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .contact {
+        text-align: left;
+    }
+} 
+
+.footerLogo {
+    margin: 0 10px 0 0;
+}
+
+@media (min-width: 600px) {
+    .footerLogo {
+        margin: 0 50px 0 0;
+    }
+
+}  
+
+.col-productInfo {
+    padding: 0 20px 0 20px;
+}
+
+@media (min-width: 600px) {
+    .col-productInfo {
+        margin: 0;
+    }
+
+}  
+
+
+/* Style */
+body {
+    background-color: black;
+}
+
+.btn {
+    border-radius: 0rem;
+}
+
+.btn-l {
+    width: 250px; 
+    font-size: 2em;
+}
+
+.btn-m {
+    width: 250px; 
+    font-size: 1.2em;
+}
+
+.box-bg {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.list-group-item {
+    padding: .3rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: black;
+}
+
+.btn-outline-light a {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light a:hover{
+    border-color: white;
+    color: black;
+}
+
+
+.btn-outline-dark a{
+    border-color: black;
+    color: black;
+}
+
+.btn-outline-dark:hover, .btn-outline-dark a:hover{
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+a:hover {
+    font-weight:300;
+    text-decoration: none;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color:rgba(255,255,255,0);
+}
+
+.carousel-control-next-icon {
+    background-image: url("imgs/nexticon.png");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("imgs/previcon.png");
+}
+
+.btn-size {
+    width:50px;
+}
+
+.btn-cart {
+    width: 80vw;;
+}
+
+@media (min-width: 600px) {
+    .btn-cart {
+        width: 34.5vw;
+    }
+
+}  
+
+hr {
+    border-top: 1px solid rgb(255,255,255,0.8);
+  }
+
+.contact-bg {
+    background: url("imgs/contact-bg.jpg");
+    position: relative;
+    background-size: cover;
+    /* min-height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    filter: grayscale(90%);
+}
+
+.footer {
+    background-color: black;
+}
+
+.form-control {
+    border-radius: 0; 
+}

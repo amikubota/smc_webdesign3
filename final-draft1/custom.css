@@ -103,7 +103,6 @@ a.shop-guidelink{
   }
 
 .jumbotron-index-top {
-    margin-top: -60px;
     background-size: cover;
     background: url("imgs/jumbotron.png");
     height: 800px; /* You must set a specified height */
