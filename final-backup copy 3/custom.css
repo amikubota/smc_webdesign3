@@ -267,8 +267,12 @@ a.shop-guidelink{
     .col-productInfo {
         margin: 0;
     }
-
 }  
+
+.carousel-indicators {
+    position: relative;
+    opacity:0.8;
+}
 
 
 /* Style */
